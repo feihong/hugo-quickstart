@@ -3,13 +3,15 @@
     <header>
       <h1>{{ .Title }}</h1>
     </header>
-    <div class="homepage-content">
+    <article>
       {{ .Content }}
-    </div>
-    <div>
-      {{ range .Site.RegularPages }}
-        {{ .Render "summary" }}
+    </article>
+    <section>
+      <ul>
+      {{ range .Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
       {{ end }}
-    </div>
+      </ul>
+    </section>
   </main>
 {{ end }}
