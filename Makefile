@@ -2,4 +2,4 @@ build:
 	hugo
 
 server:
-	hugo server --navigateToChanged
+	hugo server --buildDrafts --navigateToChanged
